@@ -14,7 +14,9 @@ const Challenge: React.FC = () => {
         
         <div className="challenge-cards">
           <div className="challenge-card">
-            <div className="challenge-card-number">1</div>
+            <div className="challenge-card-image-container">
+              <img src="https://res.cloudinary.com/djnkxndun/image/upload/v1759526233/stock-market-forex-trading-graph-futuristic_aemvco.jpg" alt="Stock market trading graph" className="challenge-card-image" />
+            </div>
             <div className="challenge-card-content">
               <h4 className="challenge-card-title">Overwhelming Data Volume</h4>
               <p className="challenge-card-description">
@@ -24,7 +26,9 @@ const Challenge: React.FC = () => {
           </div>
           
           <div className="challenge-card">
-            <div className="challenge-card-number">2</div>
+            <div className="challenge-card-image-container">
+              <img src="https://res.cloudinary.com/djnkxndun/image/upload/v1759526232/no-glitches-this-code-shot-happy-computer-programmer-working-new-software-his-computer_iylqet.jpg" alt="Programmer working on computer" className="challenge-card-image" />
+            </div>
             <div className="challenge-card-content">
               <h4 className="challenge-card-title">Limited Accessibility for Non-Trading Teams</h4>
               <p className="challenge-card-description">
@@ -34,7 +38,9 @@ const Challenge: React.FC = () => {
           </div>
           
           <div className="challenge-card">
-            <div className="challenge-card-number">3</div>
+            <div className="challenge-card-image-container">
+              <img src="https://res.cloudinary.com/djnkxndun/image/upload/v1759526281/left-right-road-sign-road-2-2_rjt0fo.jpg" alt="Road sign showing left and right directions" className="challenge-card-image" />
+            </div>
             <div className="challenge-card-content">
               <h4 className="challenge-card-title">Build vs. Buy Tradeoff</h4>
               <p className="challenge-card-description">
