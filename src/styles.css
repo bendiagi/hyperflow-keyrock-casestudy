@@ -111,6 +111,16 @@ body {
     z-index: 10;
 }
 
+/* Desktop only - position logo aligned with container left edge */
+@media (min-width: 769px) {
+    .logo {
+        position: absolute;
+        top: 2rem;
+        left: calc(50% - 600px); /* Align with container left edge */
+        transform: none;
+    }
+}
+
 /* Hero Section Styles */
 .hero {
     min-height: 100vh;
@@ -119,8 +129,9 @@ body {
     background: rgb(36, 104, 255);
     position: relative;
     overflow: hidden;
-    padding: 0 5%;
+    padding: 6rem 5%;
 }
+
 
 .hero-video {
     position: absolute;
@@ -151,6 +162,19 @@ body {
     max-width: 65%;
     padding: 0;
     text-align: left;
+}
+
+/* Desktop only - apply challenge section layout */
+@media (min-width: 769px) {
+    .hero {
+        padding: 6rem 5%;
+    }
+    
+    .hero-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        width: 100%;
+    }
 }
 
 .hero-tag {
@@ -255,6 +279,12 @@ body {
         padding-bottom: 4rem;
     }
     
+    .hero-container {
+        max-width: none;
+        margin: 0;
+        width: 100%;
+    }
+    
     .hero-content {
         max-width: 100%;
         text-align: left;
@@ -314,5 +344,149 @@ body {
         font-size: 1.1rem;
         top: 1.25rem;
         left: 3%;
+    }
+}
+
+/* Challenge Section Styles */
+.challenge {
+    background: rgb(240, 245, 255);
+    padding: 6rem 5%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.challenge-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.challenge-header {
+    margin-bottom: 4rem;
+}
+
+.challenge-subtitle {
+    font-family: 'FK Grotesk Neue', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    color: rgb(255, 119, 1);
+    margin-bottom: 1.5rem;
+    text-transform: none;
+    letter-spacing: 0.5px;
+}
+
+.challenge-title {
+    font-family: 'FK Grotesk Neue', sans-serif;
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: rgb(30, 30, 30);
+    line-height: 1.2;
+    max-width: 80%;
+}
+
+.challenge-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.challenge-card {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    display: flex;
+    gap: 1.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.challenge-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+.challenge-card-number {
+    font-family: 'FK Grotesk Neue', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: rgb(255, 119, 1);
+    background: rgba(255, 119, 1, 0.1);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.challenge-card-content {
+    flex: 1;
+}
+
+.challenge-card-title {
+    font-family: 'FK Grotesk Neue', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: rgb(30, 30, 30);
+    margin-bottom: 1rem;
+    line-height: 1.3;
+}
+
+.challenge-card-description {
+    font-family: 'FK Grotesk Neue', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    color: rgb(100, 100, 100);
+    line-height: 1.6;
+}
+
+/* Challenge Section Responsive Design */
+@media (max-width: 768px) {
+    .challenge {
+        padding: 4rem 4%;
+    }
+    
+    .challenge-title {
+        font-size: 1.25rem;
+        max-width: 100%;
+    }
+    
+    .challenge-cards {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .challenge-card {
+        padding: 1.5rem;
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .challenge-card-number {
+        align-self: center;
+        margin-bottom: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .challenge {
+        padding: 3rem 3%;
+    }
+    
+    .challenge-title {
+        font-size: 1rem;
+    }
+    
+    .challenge-card {
+        padding: 1.25rem;
+    }
+    
+    .challenge-card-number {
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
     }
 }

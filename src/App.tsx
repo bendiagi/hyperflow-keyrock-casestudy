@@ -1,5 +1,6 @@
 import React from 'react';
 import Hero from './Hero';
+import Challenge from './Challenge';
 
 const App: React.FC = () => {
   const handleGetStarted = () => {
@@ -20,6 +21,7 @@ const App: React.FC = () => {
         onPrimaryClick={handleGetStarted}
         onSecondaryClick={handleLearnMore}
       />
+      <Challenge />
     </div>
   );
 };

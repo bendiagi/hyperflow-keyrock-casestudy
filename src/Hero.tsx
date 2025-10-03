@@ -49,25 +49,27 @@ const Hero: React.FC<HeroProps> = ({
         <source src="https://res.cloudinary.com/djnkxndun/video/upload/v1759523765/home-blue_vxpa78.mp4" type="video/mp4" />
       </video>
       <a href="#" className="logo">HyperFlow</a>
-      <div className="hero-content">
-        <div className="hero-tag">Case Study by Ben Diagi</div>
-        <h1 className="hero-title">{title}</h1>
-        <h2 className="hero-subtitle">{subtitle}</h2>
-        <div className="hero-buttons">
-          <button 
-            className="btn btn-primary" 
-            onClick={handlePrimaryClick}
-            type="button"
-          >
-            {primaryButtonText}
-          </button>
-          <button 
-            className="btn btn-secondary" 
-            onClick={handleSecondaryClick}
-            type="button"
-          >
-            {secondaryButtonText}
-          </button>
+      <div className="hero-container">
+        <div className="hero-content">
+          <div className="hero-tag">Case Study by Ben Diagi</div>
+          <h1 className="hero-title">{title}</h1>
+          <h2 className="hero-subtitle">{subtitle}</h2>
+          <div className="hero-buttons">
+            <button
+              className="btn btn-primary"
+              onClick={handlePrimaryClick}
+              type="button"
+            >
+              {primaryButtonText}
+            </button>
+            <button
+              className="btn btn-secondary"
+              onClick={handleSecondaryClick}
+              type="button"
+            >
+              {secondaryButtonText}
+            </button>
+          </div>
         </div>
       </div>
     </section>
