@@ -30,7 +30,7 @@ const Challenge: React.FC = () => {
               <img src="https://res.cloudinary.com/djnkxndun/image/upload/v1759526232/no-glitches-this-code-shot-happy-computer-programmer-working-new-software-his-computer_iylqet.jpg" alt="Programmer working on computer" className="challenge-card-image" />
             </div>
             <div className="challenge-card-content">
-              <h4 className="challenge-card-title">Limited Accessibility for Non-Trading Teams</h4>
+              <h4 className="challenge-card-title">Limited Visibility</h4>
               <p className="challenge-card-description">
                 Risk, compliance, and operations teams need anomaly visibility but often rely on traders or engineers to access insights.
               </p>

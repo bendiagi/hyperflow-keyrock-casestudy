@@ -1,0 +1,166 @@
+/* User Persona Section */
+.user-persona-section {
+  padding: 4rem 0;
+  background: rgb(249, 248, 245);
+  font-family: 'Test Sohne', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  line-height: 1.2;
+  color: #000000;
+  margin: 0 0 0.5rem 0;
+  letter-spacing: -0.02em;
+}
+
+.section-subtitle {
+  font-family: 'Test Sohne', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 1.125rem;
+  color: #6b7280;
+  margin: 0 auto;
+  font-weight: 600;
+  text-align: center;
+  max-width: 600px;
+}
+
+.personas-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  position: relative; /* anchor nav arrows to container so they don't scroll */
+}
+
+.personas-viewport {
+  --slide: 59.5vw;
+  --gap: 2rem;
+  width: 100vw;
+  box-sizing: border-box;
+  position: relative;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-type: x proximity;
+  overscroll-behavior-x: contain;
+}
+
+.personas-carousel {
+  display: flex;
+  gap: var(--gap);
+  transition: transform 300ms ease;
+  transform: translateX(calc(50% - (var(--slide) / 2) - var(--index, 0) * (var(--slide) + var(--gap)) + var(--drag, 0px)));
+}
+
+/* .personas-carousel.auto intentionally removed: auto-scroll disabled */
+
+.personas-carousel.no-transition {
+  transition: none;
+}
+
+.persona-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 0 0 auto;
+  width: var(--slide);
+  scroll-snap-align: center;
+}
+
+.persona-image {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+}
+
+/* Figma Link Container */
+.figma-link-container {
+  text-align: center;
+  margin-top: 2rem;
+  padding: 0 2rem;
+}
+
+.figma-link {
+  font-family: 'Test Sohne', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 0.875rem;
+  color: #6b7280;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  transition: color 0.2s ease;
+}
+
+.figma-link:hover {
+  color: #374151;
+}
+
+.personas-container .nav-arrow {
+  background: hsl(var(--background) / 0.6) !important;
+  background-color: hsl(var(--background) / 0.6) !important;
+  border: 1px solid hsl(var(--border)) !important;
+  box-sizing: border-box;
+  width: 48px;
+  aspect-ratio: 1 / 1;
+  height: auto;
+  border-radius: 9999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  cursor: pointer;
+  color: hsl(var(--foreground));
+  padding: 0;
+  line-height: 1;
+  backdrop-filter: blur(8px) !important;
+  -webkit-backdrop-filter: blur(8px) !important;
+  box-shadow: none !important;
+  transition: transform 100ms ease;
+  z-index: 5;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.personas-container .nav-arrow:hover {
+  background: hsl(var(--background) / 0.7) !important;
+  background-color: hsl(var(--background) / 0.7) !important;
+  box-shadow: none !important;
+}
+
+.personas-container .nav-arrow:active {
+  background: hsl(var(--background) / 0.8) !important;
+  background-color: hsl(var(--background) / 0.8) !important;
+  box-shadow: none !important;
+  transform: scale(0.96);
+}
+
+.nav-arrow.nav-arrow-left {
+  position: absolute;
+  left: 0.5rem; /* inside container edge */
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.nav-arrow.nav-arrow-right {
+  position: absolute;
+  right: 0.5rem; /* inside container edge */
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* no keyframes: auto scroll handled in JS to avoid conflict with manual scroll */
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .user-persona-section {
+    padding: 2rem 5%;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+  }
+}
