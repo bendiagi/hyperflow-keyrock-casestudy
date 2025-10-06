@@ -942,6 +942,45 @@ body {
   background: rgba(221, 226, 255, 0.25);
   margin: 1.5rem 0 1.25rem 0;
 }
+
+/* Conclusion Section (styled like Solutions) */
+.conclusion {
+  background: rgb(221, 226, 255);
+  padding: 6rem 5%;
+  display: flex;
+  align-items: center;
+}
+
+.conclusion-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.conclusion-header {
+  margin-bottom: 2rem;
+}
+
+.conclusion-title {
+  font-family: 'FK Grotesk Neue', sans-serif;
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: rgb(48, 48, 86);
+  line-height: 1.2;
+  max-width: 80%;
+}
+
+.conclusion-body p {
+  font-family: 'FK Grotesk Neue', sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: rgb(60, 60, 80);
+  max-width: 900px;
+}
+
+.conclusion-body p + p {
+  margin-top: 1rem;
+}
 @media (max-width: 480px) {
   .flow-diagram {
     padding: 3rem 3%;

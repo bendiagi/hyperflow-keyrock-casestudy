@@ -6,6 +6,7 @@ import Solutions from './Solutions';
 import FlowDiagram from './FlowDiagram';
 import BuildVsBuy from './BuildVsBuy';
 import BuildVsBuyContent from './BuildVsBuyContent';
+import Conclusion from './Conclusion';
 
 const App: React.FC = () => {
   const handleGetStarted = () => {
@@ -32,6 +33,7 @@ const App: React.FC = () => {
       <FlowDiagram />
       <BuildVsBuy />
       <BuildVsBuyContent />
+      <Conclusion />
     </div>
   );
 };
