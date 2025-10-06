@@ -913,6 +913,22 @@ body {
   color: #dde2ff; /* cell text */
 }
 
+/* horizontal scroll wrapper for small screens */
+.bvb-table-wrap {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.bvb-table-wrap::-webkit-scrollbar {
+  height: 8px;
+}
+
+.bvb-table-wrap::-webkit-scrollbar-thumb {
+  background: rgba(221, 226, 255, 0.25);
+  border-radius: 8px;
+}
+
 .bvb-compare-table th,
 .bvb-compare-table td {
   padding: 14px 16px;
@@ -1057,9 +1073,19 @@ body {
     }
     
     .challenge-card {
-        padding: 1.5rem;
+        padding: 1rem; /* reduced padding on tablet/mobile */
         flex-direction: column;
         text-align: center;
+    }
+
+    .challenge-card-image-container {
+        width: calc(100% - 2rem); /* match reduced padding */
+        margin: 1rem 1rem 0 1rem; /* smaller margins */
+        height: 170px; /* keep image reasonably large */
+    }
+
+    .challenge-card-content {
+        padding: 1rem 1rem 1.25rem 1rem; /* tighter content padding */
     }
     
     .challenge-card-number {
@@ -1078,12 +1104,22 @@ body {
     }
     
     .challenge-card {
-        padding: 1.25rem;
+        padding: 0.75rem; /* further reduce padding on small phones */
     }
     
     .challenge-card-number {
         width: 50px;
         height: 50px;
         font-size: 1.5rem;
+    }
+
+    .challenge-card-image-container {
+        width: calc(100% - 1.5rem);
+        margin: 0.75rem 0.75rem 0 0.75rem;
+        height: 160px; /* maintain good visual size */
+    }
+
+    .challenge-card-content {
+        padding: 0.875rem 0.875rem 1rem 0.875rem;
     }
 }
