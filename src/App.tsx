@@ -2,6 +2,8 @@ import React from 'react';
 import Hero from './Hero';
 import Challenge from './Challenge';
 import UserPersona from './UserPersona';
+import Solutions from './Solutions';
+import FlowDiagram from './FlowDiagram';
 
 const App: React.FC = () => {
   const handleGetStarted = () => {
@@ -24,6 +26,8 @@ const App: React.FC = () => {
       />
       <Challenge />
       <UserPersona />
+      <Solutions />
+      <FlowDiagram />
     </div>
   );
 };
