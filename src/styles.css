@@ -221,6 +221,56 @@ body {
     flex-wrap: wrap;
 }
 
+  /* Explore CTA in bottom-right */
+  .hero-explore {
+      position: absolute;
+      right: 5%; /* default: match hero's left padding on small/medium screens */
+      bottom:9.5rem; /* raised slightly higher */
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: #ffffff;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      font-family: 'FK Grotesk Neue', sans-serif;
+      font-weight: 600;
+      font-size: 1.125rem; /* bigger font */
+      letter-spacing: 0.5px;
+      z-index: 3;
+  }
+
+  .hero-explore:hover {
+      opacity: 0.9;
+      transform: translateY(1px);
+  }
+
+  /* Keep right padding equal to hero's left padding at breakpoints */
+  @media (max-width: 768px) {
+    .hero-explore {
+      right: 4%;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .hero-explore {
+      right: 3%;
+    }
+  }
+
+  /* On wide screens, align with the hero container's right edge (max-width: 1200px) */
+  @media (min-width: 1200px) {
+    .hero-explore {
+      right: calc(50% - 600px);
+    }
+  }
+
+  .hero-explore-arrow {
+      width: 12px; /* slightly larger arrow */
+      height: 20px;
+      transform: rotate(90deg);
+  }
+
 .btn {
     display: inline-block;
     padding: 14px 28px;

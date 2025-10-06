@@ -7,6 +7,7 @@ import FlowDiagram from './FlowDiagram';
 import BuildVsBuy from './BuildVsBuy';
 import BuildVsBuyContent from './BuildVsBuyContent';
 import Conclusion from './Conclusion';
+import Header from './copied-header-footer/Header';
 
 const App: React.FC = () => {
   const handleGetStarted = () => {
@@ -19,6 +20,7 @@ const App: React.FC = () => {
 
   return (
     <div className="App">
+      <Header activePage={'home'} />
       <Hero
         title="Automated Crypto Market Data Pipeline"
         subtitle="A hands-on proof of concept showing how real-time crypto data can be transformed into actionable insights with anomaly detection and LLM-powered analysis."

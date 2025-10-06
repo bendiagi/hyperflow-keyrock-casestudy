@@ -36,6 +36,13 @@ const Hero: React.FC<HeroProps> = ({
     }
   };
 
+  const handleExploreClick = () => {
+    const target = document.querySelector('.challenge');
+    if (target) {
+      (target as HTMLElement).scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+
   return (
     <section className="hero">
       <video 
@@ -72,6 +79,12 @@ const Hero: React.FC<HeroProps> = ({
           </div>
         </div>
       </div>
+      <button className="hero-explore" onClick={handleExploreClick} aria-label="Explore next section">
+        <span>Explore</span>
+        <svg className="hero-explore-arrow" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M2 2L9 9L2 16" stroke="currentColor" strokeWidth="2" strokeLinecap="square" strokeLinejoin="round"></path>
+        </svg>
+      </button>
     </section>
   );
 };
