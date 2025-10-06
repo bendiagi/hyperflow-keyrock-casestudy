@@ -15,7 +15,7 @@ const Solutions: React.FC = () => {
         <div className="solutions-cards">
           <div className="solutions-card">
             <div className="solutions-card-image-container">
-              <img src="https://res.cloudinary.com/djnkxndun/image/upload/v1759526233/stock-market-forex-trading-graph-futuristic_aemvco.jpg" alt="Automated ETL Pipeline" className="solutions-card-image" />
+              <img src="https://res.cloudinary.com/djnkxndun/image/upload/v1759739997/pipeline_i4xyu8.png" alt="Automated ETL Pipeline" className="solutions-card-image" />
             </div>
             <div className="solutions-card-content">
               <h4 className="solutions-card-title">Automated ETL Pipeline</h4>
@@ -27,7 +27,7 @@ const Solutions: React.FC = () => {
           
           <div className="solutions-card">
             <div className="solutions-card-image-container">
-              <img src="https://res.cloudinary.com/djnkxndun/image/upload/v1759526232/no-glitches-this-code-shot-happy-computer-programmer-working-new-software-his-computer_iylqet.jpg" alt="Anomaly Detection Engine" className="solutions-card-image" />
+              <img src="https://res.cloudinary.com/djnkxndun/image/upload/v1759739996/magnifying_l0obic.png" alt="Anomaly Detection Engine" className="solutions-card-image" />
             </div>
             <div className="solutions-card-content">
               <h4 className="solutions-card-title">Anomaly Detection Engine</h4>
@@ -39,7 +39,7 @@ const Solutions: React.FC = () => {
           
           <div className="solutions-card">
             <div className="solutions-card-image-container">
-              <img src="https://res.cloudinary.com/djnkxndun/image/upload/v1759526281/left-right-road-sign-road-2-2_rjt0fo.jpg" alt="LLM-Powered Insights" className="solutions-card-image" />
+              <img src="https://res.cloudinary.com/djnkxndun/image/upload/v1759739996/ai-bot_wxrhrl.png" alt="LLM-Powered Insights" className="solutions-card-image" />
             </div>
             <div className="solutions-card-content">
               <h4 className="solutions-card-title">LLM-Powered Insights</h4>

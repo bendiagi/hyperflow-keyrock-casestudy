@@ -681,27 +681,21 @@ body {
   position: relative;
   border-radius: 8px;
   overflow: hidden;
+  background: rgb(221, 226, 255); /* light purple theme */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .solutions-card-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 8px;
+  width: 108px;
+  height: 108px;
+  object-fit: contain;
 }
 
+/* remove previous blue overlay for new icon style */
 .solutions-card-image-container::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(36, 104, 255, 0.6);
-  border-radius: 8px;
-  pointer-events: none;
-  z-index: 1;
-  mix-blend-mode: multiply;
+  content: none;
 }
 
 .solutions-card-content {
@@ -801,6 +795,153 @@ body {
   }
 }
 
+/* Build vs Buy Overlap Section (half-height, split background) */
+.bvb-section {
+  --bvb-section-height: 60vh; /* revert: keep section half-height */
+  --bvb-bg-purple: #303056;
+  position: relative;
+  height: var(--bvb-section-height);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 5%;
+  background: linear-gradient(to bottom, #ffffff 0 50%, var(--bvb-bg-purple) 50% 100%);
+}
+
+/* Overlap card wrapper uses translate to straddle mid horizon */
+.bvb-overlap-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 1300px; /* increased width */
+  padding: 0 0; /* keep container tight */
+}
+
+.bvb-intro-card {
+  position: relative;
+  background: url('https://keyrock.com/assets/uploads/2024/05/cards-bg-3-1.jpg') center/cover no-repeat;
+  border-radius: 16px;
+  box-shadow: 0 18px 40px rgba(29, 35, 67, 0.18);
+  padding: 3rem 2.5rem;
+  min-height: 390px; /* taller card per request */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  overflow: hidden;
+}
+
+.bvb-intro-card::before {
+  content: none;
+}
+
+.bvb-intro-tag {
+  display: block;
+  font-family: 'FK Grotesk Neue', sans-serif;
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: rgb(255, 119, 1);
+  margin: 0 auto 0.75rem auto;
+}
+
+.bvb-intro-title {
+  position: relative;
+  z-index: 1;
+  font-family: 'FK Grotesk Neue', sans-serif;
+  font-size: 3.2rem;
+  font-weight: 700;
+  color: rgb(48, 48, 86);
+  letter-spacing: -0.02em;
+  line-height: 1.1; /* tighter spacing between lines */
+}
+
+@media (max-width: 768px) {
+  .bvb-section {
+    --bvb-section-height: 45vh;
+    padding: 0 4%;
+  }
+  .bvb-intro-title {
+    font-size: 2rem;
+    line-height: 1.1; /* keep slightly more readable on small screens */
+  }
+}
+
+/* Build vs Buy Content Section */
+.bvb-content-section {
+  background: var(--bvb-bg-purple, #303056); /* match overlay section bottom color */
+  padding: 4rem 5% 6rem 5%;
+}
+
+.bvb-content-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.bvb-content-heading {
+  font-family: 'FK Grotesk Neue', sans-serif;
+  font-weight: 700;
+  font-size: 1.6rem;
+  color: #ac7fff; /* heading color */
+  margin-bottom: 1rem;
+}
+
+.bvb-content-body {
+  font-family: 'FK Grotesk Neue', sans-serif;
+  font-weight: 300; /* lighter weight */
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #dde2ff; /* body text color */
+  max-width: 900px;
+}
+
+.bvb-content-preheading {
+  margin-bottom: 0.5rem;
+}
+
+.bvb-content-body + .bvb-content-body {
+  margin-top: 1rem;
+}
+
+/* Build vs Buy comparison table */
+.bvb-compare-table {
+  width: 100%;
+  max-width: 1100px;
+  margin-top: 2rem;
+  border-collapse: collapse;
+  color: #dde2ff; /* cell text */
+}
+
+.bvb-compare-table th,
+.bvb-compare-table td {
+  padding: 14px 16px;
+  border-bottom: 1px solid rgba(221, 226, 255, 0.18);
+  vertical-align: top;
+  text-align: left;
+}
+
+.bvb-compare-table thead tr {
+  background: #28284b; /* slightly darker than #303056 */
+}
+
+.bvb-compare-table th {
+  color: #ac7fff; /* header color */
+  font-weight: 700;
+}
+
+.bvb-compare-table tr:last-child th,
+.bvb-compare-table tr:last-child td {
+  border-bottom: none;
+}
+
+.bvb-divider {
+  border: none;
+  height: 1px;
+  background: rgba(221, 226, 255, 0.25);
+  margin: 1.5rem 0 1.25rem 0;
+}
 @media (max-width: 480px) {
   .flow-diagram {
     padding: 3rem 3%;

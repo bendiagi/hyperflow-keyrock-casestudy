@@ -4,6 +4,8 @@ import Challenge from './Challenge';
 import UserPersona from './UserPersona';
 import Solutions from './Solutions';
 import FlowDiagram from './FlowDiagram';
+import BuildVsBuy from './BuildVsBuy';
+import BuildVsBuyContent from './BuildVsBuyContent';
 
 const App: React.FC = () => {
   const handleGetStarted = () => {
@@ -28,6 +30,8 @@ const App: React.FC = () => {
       <UserPersona />
       <Solutions />
       <FlowDiagram />
+      <BuildVsBuy />
+      <BuildVsBuyContent />
     </div>
   );
 };
