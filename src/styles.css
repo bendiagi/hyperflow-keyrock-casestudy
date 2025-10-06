@@ -821,7 +821,6 @@ body {
 
 .bvb-intro-card {
   position: relative;
-  background: url('https://keyrock.com/assets/uploads/2024/05/cards-bg-3-1.jpg') center/cover no-repeat;
   border-radius: 16px;
   box-shadow: 0 18px 40px rgba(29, 35, 67, 0.18);
   padding: 3rem 2.5rem;
@@ -947,6 +946,7 @@ body {
 .conclusion {
   background: rgb(221, 226, 255);
   padding: 6rem 5%;
+  min-height: 100vh;
   display: flex;
   align-items: center;
 }
