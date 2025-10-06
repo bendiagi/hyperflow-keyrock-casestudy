@@ -53,16 +53,16 @@ const Header = ({ activePage }: HeaderProps) => {
   return (
     <header className="header" style={{ backdropFilter: 'blur(8px)', WebkitBackdropFilter: 'blur(8px)', position: 'sticky', top: 0, zIndex: 50 }}>
       <nav className="nav-container">
-        <a href="/" className="brand">
+        <a href="https://www.bendiagi.com/" className="brand" target="_blank" rel="noopener noreferrer">
           <span className="brand-name">BEN DIAGI</span>
           <span className="brand-title">PRODUCT MANAGER</span>
         </a>
         
         {/* Desktop Navigation */}
         <div className="desktop-nav">
-          <a href="/" className={getLinkStyle('home')}>WORK</a>
-          <a href="/about" className={getLinkStyle('about')}>ABOUT</a>
-          <a href="/writing" className={getLinkStyle('writing')}>WRITING</a>
+          <a href="https://www.bendiagi.com/" target="_blank" rel="noopener noreferrer" className={getLinkStyle('home')}>WORK</a>
+          <a href="https://www.bendiagi.com/about" target="_blank" rel="noopener noreferrer" className={getLinkStyle('about')}>ABOUT</a>
+          <a href="https://www.bendiagi.com/writing" target="_blank" rel="noopener noreferrer" className={getLinkStyle('writing')}>WRITING</a>
           <button 
             onClick={handleResumeDownload}
             className="resume-button"
@@ -99,21 +99,27 @@ const Header = ({ activePage }: HeaderProps) => {
           <div className="mobile-menu-content">
             <nav className="mobile-nav">
               <a 
-                href="/" 
+                href="https://www.bendiagi.com/" 
+                target="_blank"
+                rel="noopener noreferrer"
                 onClick={() => setIsMobileMenuOpen(false)}
                 className={`mobile-nav-link ${getLinkStyle('home')}`}
               >
                 WORK
               </a>
               <a 
-                href="/about" 
+                href="https://www.bendiagi.com/about" 
+                target="_blank"
+                rel="noopener noreferrer"
                 onClick={() => setIsMobileMenuOpen(false)}
                 className={`mobile-nav-link ${getLinkStyle('about')}`}
               >
                 ABOUT
               </a>
               <a 
-                href="/writing" 
+                href="https://www.bendiagi.com/writing" 
+                target="_blank"
+                rel="noopener noreferrer"
                 onClick={() => setIsMobileMenuOpen(false)}
                 className={`mobile-nav-link ${getLinkStyle('writing')}`}
               >
