@@ -10,11 +10,11 @@ import Conclusion from './Conclusion';
 
 const App: React.FC = () => {
   const handleGetStarted = () => {
-    alert('Welcome! Let\'s get started with your journey.');
+    window.open('https://hyperflow-keyrock-production.up.railway.app/', '_blank', 'noopener');
   };
 
   const handleLearnMore = () => {
-    alert('Learn more about our amazing features and capabilities.');
+    window.open('https://github.com/bendiagi/hyperflow-keyrock', '_blank', 'noopener');
   };
 
   return (
