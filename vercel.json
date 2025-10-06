@@ -4,7 +4,8 @@
   "outputDirectory": "dist",
   "framework": null,
   "rewrites": [
-    { "source": "/(.*)", "destination": "/index.html" }
+    { "source": "/keyrock-hyperflow", "destination": "/index.html" },
+    { "source": "/keyrock-hyperflow/(.*)", "destination": "/$1" }
   ]
 }
 
